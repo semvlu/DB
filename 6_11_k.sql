@@ -1,0 +1,3 @@
+UPDATE WORKS_ON
+SET Hours = 5.0
+WHERE Essn = '999887777' AND Pno = 10

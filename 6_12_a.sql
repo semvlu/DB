@@ -1,0 +1,4 @@
+CREATE TABLE 6_12_a(
+SELECT Name
+FROM STUDENT 
+WHERE Class = 4 AND Major = 'CS');

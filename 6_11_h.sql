@@ -1,0 +1,2 @@
+DELETE FROM PROJECT
+WHERE Pname = 'ProductX'

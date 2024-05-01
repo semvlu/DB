@@ -1,0 +1,2 @@
+INSERT INTO STUDENT
+VALUES ('Johnson', 25, 1, 'Math')

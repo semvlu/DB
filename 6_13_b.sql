@@ -1,0 +1,3 @@
+UPDATE STUDENT
+SET Class = 2
+WHERE Name = 'Smith'
