@@ -1,0 +1,14 @@
+-- Force drop table
+SET FOREIGN_KEY_CHECKS=0; 
+DROP TABLE <table>;
+SET FOREIGN_KEY_CHECKS=1;
+
+-- Create
+CREATE SCHEMA `S0`;
+CREATE DATABASE DB0;
+
+-- Setup init state
+SET FOREIGN_KEY_CHECKS=0; 
+INSERT INTO <table>
+VALUES (), (),...();
+SET FOREIGN_KEY_CHECKS=1;

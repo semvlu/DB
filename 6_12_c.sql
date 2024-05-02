@@ -1,5 +1,5 @@
 CREATE TABLE 6_12_c(
-SELECT s.Course_number, s.Semester, s.Year, s.COUNT(Student_number) 
+SELECT s.Course_number, s.Semester, s.Year, COUNT(Student_number)
 FROM SECTION s JOIN GRADE_REPORT g 
 ON s.Section_identifier = g.Section_identifier
 WHERE s.Instructor = 'King');
