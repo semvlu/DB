@@ -1,4 +1,3 @@
 INSERT INTO EMPLOYEE
-VALUES ('Robert', 'F', 'Scott', '943775543', '1972-06-21', 
-'2365 Newcastle Rd, Bellaire, TX',
-'M', 58000, '888665555', 1)
+VALUES ('Sophia', 'M', 'Wood', '973442298', '1974-05-21', 
+'23 S Lamar Blvd. Rd, Austin, TX', 'F', 62000, '222445555', 5)

@@ -1,2 +1,2 @@
 INSERT INTO DEPARTMENT
-VALUES ('Production', 4, '943775543', '2007-10-01')
+VALUES ('Information Technology', 2, '987987987', '2007-10-01')

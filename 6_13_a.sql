@@ -1,2 +1,2 @@
-INSERT INTO STUDENT
-VALUES ('Johnson', 25, 1, 'Math')
+INSERT INTO COURSE
+VALUES ('Financial Accounting', 'FAC4390', 5, 'BUSINESS')

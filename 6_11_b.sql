@@ -1,2 +1,2 @@
 INSERT INTO PROJECT
-VALUES ('ProductA', 4, 'Bellaire', 2)
+VALUES ('6Sigma', 4, 'Austin', 4)

@@ -1,6 +1,6 @@
 CREATE TABLE 6_10_b(
 SELECT Fname, Minit, Lname
-FROM EMPLOYEE, DEPENDENT
-WHERE Essn = Ssn AND Dependent_name = Fname);
+FROM EMPLOYEE
+WHERE Super_ssn = '333445555' AND Address LIKE '%Houston, TX');
 
--- emp names w/ a dependent w/ same Fname as themselves
+-- emp names from Houston, Texas, Super_ssn = '333445555'

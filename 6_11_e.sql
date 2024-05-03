@@ -1,2 +1,2 @@
 INSERT INTO DEPENDENT
-VALUES ('453453453', 'John', 'M', '1990-12-12', 'spouse')
+VALUES ('888665555', 'John', 'M', NULL, 'Son')

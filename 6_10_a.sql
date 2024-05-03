@@ -2,6 +2,6 @@ CREATE TABLE 6_10_a(
 SELECT Fname, Minit, Lname 
 FROM EMPLOYEE, PROJECT, WORKS_ON
 WHERE Dno = 5 AND Essn = Ssn AND Pno = Pnumber AND 
-Hours > 10.0 AND Pname = "ProductX");
+Salary > 3000 AND Pname = "ProductZ");
 
--- emp names in dpt 5, work >10hr/wk on productX
+-- emp names in dpt 5, salary >3000 on productZ

@@ -1,3 +1,3 @@
-UPDATE WORKS_ON
-SET Hours = 5.0
-WHERE Essn = '999887777' AND Pno = 10
+UPDATE PROJECT
+SET Pnumber = 40
+WHERE Pnumber = 30
