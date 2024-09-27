@@ -1,0 +1,78 @@
+use <database> // create / change a DB
+db.createCollection("posts")
+
+db.posts.insertOne({
+    title: "My first post", 
+    content: "Hello world!"
+}) // single insert
+
+db.posts.insertMany([
+    {
+        title: "New Release for Product A",
+        content: "Today is the day"
+    },
+    {
+        title: "New Release for Product B",
+        content: "Tomorrow is the day",
+        tags: ["news", "business"]
+    }
+])
+
+db.posts.find( {title: "My first post"})
+
+// Projection: include: 1, exclude: 0, cf. aggregate $project also
+db.posts.find({}, { title: 1, content: 1, tags: 0})
+
+// Update
+db.posts.updateOne(
+    { title: "New Release for Product B"},
+    { $set: {likes: 13} }
+)
+// Upsert: insert if not found
+db.posts.updateOne(
+    { title: "New Release for Product C"},
+    { $set: 
+        {
+            title: "New Release for Product C",
+            content: "Oct 20th is the day",
+            likes: 13
+        } 
+    },
+    {upsert: true}
+)
+
+db.posts.updateMany({}, {$inc: {likes: 1}})
+db.posts.deleteOne({title: {$regex: /New Release for Product [A-Z]/}})
+
+// Query Op
+$eq, $ne, $gt, $gte, $lt, $lte, $in
+$and, $or, $nor, $not
+// Update Op
+$currentDate
+$rename
+$unset // delete the field
+    // Array Update Op
+    $addToSet, $pop, $push, $pull // remove all elem. that match the query
+
+// Aggregation
+db.posts.aggregate([
+    {
+        $match: { likes: {$gt: 2} }
+    },
+    {
+        $group: { _id: "$category", totalLikes: {$sum: "$likes"}}
+        // GROUP BY category
+    }
+])
+
+db.posts.aggregate([
+    {
+        project:
+        {
+            "title": 1,
+            "content": 0,
+            "likes": 1,
+            _id: 0
+        }
+    }
+])
