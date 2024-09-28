@@ -72,7 +72,7 @@ db.posts.aggregate([
             "title": 1,
             "content": 0,
             "likes": 1,
-            _id: 0
+            "_id": 0
         }
     }
 ])
